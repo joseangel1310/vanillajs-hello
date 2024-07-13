@@ -8,13 +8,6 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
 
-  function aleatorio(lista) {
-    let numAleatorio = Math.floor(Math.random() * lista.length);
-    return lista[numAleatorio] + " ";
-  }
-
-  //who + action + what + when
-
   let who = [
     "The dog",
     "My grandma",
@@ -34,10 +27,21 @@ window.onload = function() {
     "when I was sleeping",
     "while I was exercising",
     "during my lunch",
-    "while I was praying"
+    "while I was praying",
+    "Elden ring goty"
   ];
+
+  function aleatorio(lista) {
+    let numAleatorio = Math.floor(Math.random() * lista.length);
+    return lista[numAleatorio] + " ";
+  }
+
+  //who + action + what + when
+
   console.log("Hello Rigo from the console!");
   console.log(
     aleatorio(who) + aleatorio(action) + aleatorio(what) + aleatorio(when)
   );
+  document.querySelector(".alert-warning").innerHTML =
+    aleatorio(who) + aleatorio(action) + aleatorio(what) + aleatorio(when);
 };
